@@ -218,7 +218,7 @@ class TicketBookingScreen:
                 parent_window.destroy()# Close history window
                 self.view_history()# Reload updated history
                 
-            except ValueError as e:# Show error if something goes wrong
+            except ValueError as e:# Show error if something goes wrong.
                 messagebox.showerror("Error", str(e))
         
         ttk.Button(frame, text="Save Changes", command=save_changes).grid(row=2, column=0, columnspan=2, pady=10)# Save button to apply changes
