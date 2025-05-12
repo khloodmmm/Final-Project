@@ -3,7 +3,7 @@
 import tkinter as tk
 
 # Import GUI screen classes and model classes from separate modules
-from gui import LoginScreen, TicketBookingScreen, AdminDashboard
+from A3.gui import LoginScreen, TicketBookingScreen, AdminDashboard
 from models import Admin, DataManager
 
 # Define the main application class for the Grand Prix ticket booking system
