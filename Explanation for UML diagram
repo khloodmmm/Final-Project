@@ -1,0 +1,63 @@
+1.	LoginScreen Class
+Attributes:
+•	root: Main window object.
+•	email_entry: Input field for the user’s email.
+Methods:
+•	_init_(): Initializes the login screen UI.
+•	show_register(): Opens the registration screen.
+•	show_booking(): Takes user to the ticket booking screen.
+2.	RegisterScreen Class
+Attributes:
+•	email_entry: Input field for new user’s email.
+•	password_entry: Input field for new user’s password.
+Methods:
+•	_init_(): Initializes the registration screen UI.
+•	register_user(): Handles new user registration logic.
+3.	TicketBookingScreen Class
+Attributes:
+•	user_email: Email of the logged-in user.
+•	ticket_type: Type of ticket selected.
+•	quantify: Likely a typo of quantity (number of tickets).
+•	payment_method: Chosen payment method.
+•	total_price_label: Displays total price.
+•	cancel_order: Possibly a flag or button for order cancellation.
+Methods:
+•	_init_(): Initializes the booking screen.
+•	purchase_ticket(): Handles purchasing logic.
+•	update_price(): Calculates and updates total price.
+•	view_history(): Shows previous orders.
+•	modify_order(): Allows order changes.
+•	back_to_login(): Returns to login screen.
+4.	AdminDashboard Class
+Attributes:
+•	root: Main admin UI window.
+Methods:
+•	_init_(): Initializes the admin dashboard interface.
+5.	DataManager Class
+Methods:
+•	save_data(obj, filename): Saves objects (e.g., user, order) to a file.
+•	load_data(filename): Loads data from a file.
+6.	User Class
+Attributes:
+•	email: Email of the user.
+•	password: Password of the user.
+7.	Ticket Class
+Attributes:
+•	id: Unique ticket ID.
+•	type: Type of the ticket (e.g., VIP, Regular).
+•	price: Price of one ticket.
+8.	Order Class
+Attributes:
+•	id: Unique order ID.
+•	user_email: The email of the user placing the order.
+•	ticket_type: The type of ticket booked.
+•	quantity: Number of tickets booked.
+•	payment_method: Chosen payment method.
+•	total_price: Total amount to be paid.
+9.	Relationships:
+•	LoginScreen → TicketBookingScreen: After login, user proceeds to ticket booking.
+•	TicketBookingScreen → Ticket: Tickets are selected/booked from the booking screen.
+•	TicketBookingScreen ↔ Order: Orders are created or modified via this screen.
+•	TicketBookingScreen → AdminDashboard: Possibly for admin access.
+•	Order ↔ DataManager: Orders are saved/loaded using DataManager.
+•	User ↔ Ticket: A user can buy or be associated with a ticket.
